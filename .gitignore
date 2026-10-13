@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js & Build outputs
+.next/
+out/
+build/
+dist/
+
+# Python & Virtual Environments
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Environment variables & Local config
+.env
+.env.local
+.env.*.local
+.DS_Store
+Thumbs.db

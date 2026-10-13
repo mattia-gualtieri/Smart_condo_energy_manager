@@ -1,0 +1,88 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+:root {
+  color-scheme: dark;
+  --radius: 0.75rem;
+
+  /* Slate-tinted dark base */
+  --background: oklch(0.19 0.018 256);
+  --foreground: oklch(0.95 0.006 256);
+  --card: oklch(0.23 0.02 256);
+  --card-foreground: oklch(0.95 0.006 256);
+  --popover: oklch(0.23 0.02 256);
+  --popover-foreground: oklch(0.95 0.006 256);
+
+  /* Emerald brand */
+  --primary: oklch(0.72 0.16 162);
+  --primary-foreground: oklch(0.18 0.03 162);
+
+  --secondary: oklch(0.28 0.02 256);
+  --secondary-foreground: oklch(0.95 0.006 256);
+  --muted: oklch(0.27 0.018 256);
+  --muted-foreground: oklch(0.68 0.015 256);
+  --accent: oklch(0.3 0.02 256);
+  --accent-foreground: oklch(0.95 0.006 256);
+  --destructive: oklch(0.63 0.2 22);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.72 0.16 162);
+
+  /* Functional status colors */
+  --success: oklch(0.74 0.16 162);
+  --success-foreground: oklch(0.18 0.03 162);
+  --warning: oklch(0.82 0.15 82);
+  --warning-foreground: oklch(0.24 0.05 82);
+  --danger: oklch(0.65 0.21 18);
+  --danger-foreground: oklch(0.98 0.01 18);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
